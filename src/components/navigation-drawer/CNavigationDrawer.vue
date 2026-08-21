@@ -6,6 +6,8 @@
     rail-width="80"
     mobile-breakpoint="md"
     class="c-navigation-drawer"
+    :color="color"
+    :floating="floating"
   >
     <div class="d-flex flex-column" style="height: 100%">
       <!-- Branding -->
@@ -37,6 +39,31 @@ import { useDisplay } from "vuetify";
 
 const slots = useSlots();
 const { smAndDown } = useDisplay();
+
+/**
+ * This component builds a navigation drawer that supports rail mode on large devices.
+ */
+withDefaults(
+  defineProps<{
+    /**
+     * The background color of the navigation drawer.
+     *
+     * Defaults to "background" for floating design.
+     */
+    color?: string;
+
+    /**
+     * Whether the navigation drawer should be rendered without a border.
+     *
+     * Defaults to true.
+     */
+    floating?: boolean;
+  }>(),
+  {
+    color: "background",
+    floating: true,
+  },
+);
 
 /**
  * The model, whether the navigation drawer should be expanded or not.

@@ -1,7 +1,7 @@
 <template>
   <div class="c-secondary-navigation">
     <v-navigation-drawer
-      v-if="slots['list-items']"
+      v-if="showDrawer"
       :color="sideNavigationColor"
       :order="navigationDrawerOrder"
       :class="navigationDrawerClass"
@@ -15,12 +15,12 @@
 
     <v-scale-transition v-if="slots['tab-items']">
       <v-app-bar
-        v-if="mdAndDown"
+        v-if="showTabs"
         :color="tabNavigationColor"
         :order="appBarOrder"
         height="48"
       >
-        <c-primary-tabs>
+        <c-primary-tabs :align-tabs="alignTabs">
           <slot name="tab-items"></slot>
         </c-primary-tabs>
       </v-app-bar>
@@ -29,8 +29,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed, useSlots } from "vue";
 import { useDisplay } from "vuetify";
-import { useSlots } from "vue";
 import CPrimaryTabs from "./CPrimaryTabs.vue";
 
 /**
@@ -49,8 +49,22 @@ import CPrimaryTabs from "./CPrimaryTabs.vue";
  * Shown below vuetify md-breakpoint.
  * Requires `v-tab`s in the `tab-items` slot.
  */
-withDefaults(
+const props = withDefaults(
   defineProps<{
+    /**
+     * Controls which navigation type is displayed.
+     *
+     * - `"hybrid"` (default): drawer on larger screens, tabs on smaller screens (md and below).
+     * - `"drawer"`: always show the side navigation drawer.
+     * - `"tabs"`: always show the tab navigation bar.
+     */
+    mode?: "hybrid" | "drawer" | "tabs";
+
+    /**
+     * Where the tabs should be aligned inside `CPrimaryTabs`.
+     */
+    alignTabs?: "start" | "title" | "center" | "end";
+
     /**
      * Adjust the order of the navigation-drawer in which the side navigation is placed
      * in relation to its registration order.
@@ -79,6 +93,8 @@ withDefaults(
     tabNavigationColor?: string;
   }>(),
   {
+    mode: "hybrid",
+    alignTabs: "start",
     navigationDrawerOrder: 1,
     sideNavigationColor: "background",
     navigationDrawerClass: undefined,
@@ -89,13 +105,24 @@ withDefaults(
 
 const slots = useSlots();
 const { mdAndDown } = useDisplay();
+
+const showDrawer = computed(() => {
+  if (!slots["list-items"]) return false;
+  return props.mode === "hybrid" || props.mode === "drawer";
+});
+
+const showTabs = computed(() => {
+  if (props.mode === "drawer") return false;
+  if (props.mode === "tabs") return true;
+  // hybrid: only on md and below
+  return mdAndDown.value;
+});
 </script>
 
 <style lang="scss">
 .c-secondary-navigation {
   .v-list-item {
-    border-top-right-radius: 24px !important;
-    border-bottom-right-radius: 24px !important;
+    border-radius: 8px 24px 24px 8px !important;
 
     .v-list-item__prepend .v-list-item__spacer {
       width: 16px !important;
