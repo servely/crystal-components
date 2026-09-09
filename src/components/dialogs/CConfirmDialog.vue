@@ -7,6 +7,7 @@
     :persistent="loading"
     :loading="loading"
     title-size="normal"
+    wrap-title
   >
     <template v-if="slots['activator']" #activator="{ props: activatorProps }">
       <slot name="activator" :props="activatorProps"></slot>
