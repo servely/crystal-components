@@ -51,8 +51,8 @@
     "vuetify": "^3.5.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.3",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
     "@mdi/js": "7.4.47",
     "@nuxt/kit": "3.21.11",
     "@nuxtjs/eslint-config-typescript": "12.1.0",
