@@ -1,0 +1,93 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "config:js-lib",
+    "mergeConfidence:all-badges",
+    ":semanticCommitTypeAll(build)",
+  ],
+  "labels": ["type:build"],
+  "separateMultipleMajor": true,
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies", "dev-dependencies", "dev"],
+      // Runtime dependencies take precedence across all updates in the branch.
+      "semanticCommitScope": "{{#if (includes depTypes 'dependencies')}}deps{{else}}deps-dev{{/if}}",
+      "addLabels": ["scope:deps-dev"],
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "semanticCommitScope": "deps-dev",
+      "addLabels": ["scope:deps-dev"],
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "addLabels": ["scope:deps"],
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "semanticCommitScope": "deps",
+      "addLabels": ["scope:deps"],
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "automergeStrategy": "rebase",
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "automerge": true,
+      "automergeStrategy": "rebase",
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "@crystal-creations/animated-checkmark",
+        "@crystal-creations/pulsating-circle",
+      ],
+      "automerge": true,
+      "automergeStrategy": "rebase",
+      "minimumReleaseAge": null,
+      "ignoreUnstable": false,
+      "separateMultipleMajor": true,
+    },
+    // Extend existing preset groups with their integrations.
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "storybook",
+        "@storybook/*",
+        "storybook-i18n",
+        "eslint-plugin-storybook",
+      ],
+      "groupName": "storybook",
+      "separateMultipleMajor": false,
+    },
+    {
+      "matchDatasources": ["npm"],
+      // eslint-plugin-storybook stays in the storybook group, which takes precedence.
+      "matchPackageNames": [
+        "eslint",
+        "@nuxtjs/eslint-config-typescript",
+        "eslint-plugin-vue",
+        "eslint-plugin-prettier",
+        "eslint-config-prettier",
+        "prettier",
+      ],
+      "groupName": "linting",
+      "separateMultipleMajor": false,
+    },
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeStrategy": "rebase",
+  },
+}

@@ -1,9 +1,7 @@
 name: Build
 on:
-  push:
-    branches: [updates]
   pull_request:
-    branches: [main, beta, updates]
+    branches: [main, beta]
 
 jobs:
   yarn_build:
