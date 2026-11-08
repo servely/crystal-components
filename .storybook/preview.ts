@@ -9,7 +9,7 @@ import {
   DefaultLocaleMessageSchema,
   LocaleMessages,
 } from "vue-i18n";
-import { addons } from "@storybook/preview-api";
+import { addons } from "storybook/preview-api";
 import { h } from "vue";
 import options from "../vuetify-options";
 import { withVuetifyTheme, DEFAULT_THEME } from "./withVuetifyTheme.decorator";
@@ -62,6 +62,7 @@ export const globalTypes = {
 };
 
 const preview: Preview = {
+  tags: ["autodocs"],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     layout: "fullscreen",
@@ -90,12 +91,14 @@ const preview: Preview = {
   },
 };
 
-export const globals = {
+export const initialGlobals = {
   locales: {
     en: "English",
     de: "Deutsch",
   },
 };
+
+export const globals = initialGlobals;
 
 export default preview;
 
