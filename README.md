@@ -79,4 +79,4 @@ There are two ways develop new or improve existing components:
 
 To add a new component:
 1. Create the component in `src/components`
-2. Add it to `src/index.ts` and `src/nuxt.mjs`
+2. Add it to `src/index.ts` and `src/nuxt.ts`
