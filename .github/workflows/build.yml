@@ -27,6 +27,8 @@ jobs:
         run: yarn lint
       - name: Build
         run: yarn build
+      - name: Check release notes
+        run: yarn test:release-notes
 
   commitlint:
     if: ${{ github.event_name == 'pull_request' }}
