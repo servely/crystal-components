@@ -83,7 +83,7 @@
     "storybook": "7.6.21",
     "storybook-i18n": "~2.0.13",
     "typescript": "5.9.3",
-    "vite": "^4.4.9",
+    "vite": "^6.0.0",
     "vite-plugin-dts": "3.7.2",
     "vite-plugin-turbosnap": "1.0.3",
     "vue": "3.4.15",
