@@ -1,18 +1,15 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
-import { createRequire } from "node:module";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import semanticRelease from "semantic-release";
+import releaseConfig from "../release.config.ts";
 
-const require = createRequire(import.meta.url);
-const releaseConfig = require("../release.config.cjs");
-
-async function checkReleaseNotes() {
+async function checkReleaseNotes(): Promise<void> {
   const cwd = mkdtempSync(join(tmpdir(), "crystal-components-release-notes-"));
-  const git = (...args) =>
+  const git = (...args: string[]): string =>
     execFileSync("/usr/bin/git", args, { cwd, encoding: "utf8" }).trim();
 
   try {
@@ -36,8 +33,8 @@ async function checkReleaseNotes() {
       git("commit", "--allow-empty", "-m", message);
     }
 
-    const plugins = releaseConfig.plugins.filter(
-      (plugin) =>
+    const plugins = (releaseConfig.plugins ?? []).filter(
+      (plugin): plugin is [string, unknown] =>
         Array.isArray(plugin) &&
         [
           "@semantic-release/commit-analyzer",
@@ -85,7 +82,7 @@ async function checkReleaseNotes() {
 
 try {
   await checkReleaseNotes();
-} catch (error) {
+} catch (error: unknown) {
   console.error(error);
   process.exitCode = 1;
 }

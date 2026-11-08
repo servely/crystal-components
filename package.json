@@ -7,7 +7,7 @@
   "description": "A vuetify based component library from Servely",
   "scripts": {
     "lint": "eslint src --max-warnings 0",
-    "test:release-notes": "node scripts/check-release-notes.js",
+    "test:release-notes": "node scripts/check-release-notes.ts",
     "semantic-release": "semantic-release",
     "build": "vite build",
     "dev": "vite",
