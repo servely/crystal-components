@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/vue3";
-import { userEvent, within } from "@storybook/testing-library";
+import { Meta, StoryObj } from "@storybook/vue3-vite";
+import { userEvent, within } from "storybook/test";
 import isChromatic from "chromatic/isChromatic";
 import { CConfirmDialog } from "../../src";
 import {
