@@ -84,7 +84,7 @@
     "storybook-i18n": "~2.0.13",
     "typescript": "6.0.3",
     "vite": "6.4.5",
-    "vite-plugin-dts": "3.7.2",
+    "vite-plugin-dts": "3.9.1",
     "vite-plugin-turbosnap": "1.0.3",
     "vue": "3.4.15",
     "vue-i18n": "11.4.18",
