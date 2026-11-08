@@ -1247,10 +1247,10 @@
   resolved "https://registry.yarnpkg.com/@crystal-creations/animated-checkmark/-/animated-checkmark-4.0.0-beta.5.tgz#18e689b206df15aae5392e9a206ac9dbd4f6b8df"
   integrity sha512-DNZBpjeW6sHEFBQ7kObUwwUKqWA9wxzo6DXaQHretbApPo08WPLZ0x/QT+O/pc9xTnB/XalkH1fIaFLlwSApPA==
 
-"@crystal-creations/pulsating-circle@4.0.0-beta.1":
-  version "4.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@crystal-creations/pulsating-circle/-/pulsating-circle-4.0.0-beta.1.tgz#946526da99c003726c362aed0f4704a44ada8061"
-  integrity sha512-Frrtz3VycbDavJV/XODymjw7g3alWf9HEydEZSemdH74SHdRDJUerNn5nYSPiFRGR87Mg019gzNbyKfcwYOkWg==
+"@crystal-creations/pulsating-circle@4.0.0-next.2":
+  version "4.0.0-next.2"
+  resolved "https://registry.yarnpkg.com/@crystal-creations/pulsating-circle/-/pulsating-circle-4.0.0-next.2.tgz#e2e23d944e665187d847154adf4b7c7486126b47"
+  integrity sha512-Gf6PPzQktvJzYIx0jB6ulXFmjuDKm0Fi0WmfdPSMy5yr+9NV5vMc4aK1TNAKpi1DV12iTiZPTkdzMNBk1hMbCQ==
 
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.7"
