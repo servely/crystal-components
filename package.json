@@ -91,7 +91,7 @@
     "vuetify": "3.5.2"
   },
   "dependencies": {
-    "@crystal-creations/animated-checkmark": "4.0.0-beta.5",
+    "@crystal-creations/animated-checkmark": "4.0.0-next.6",
     "@crystal-creations/pulsating-circle": "4.0.0-beta.1"
   }
 }
