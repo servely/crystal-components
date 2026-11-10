@@ -40,7 +40,8 @@
       "default": "./dist/style.css"
     },
     "./nuxt": {
-      "default": "./src/nuxt.mjs"
+      "types": "./src/nuxt.ts",
+      "default": "./src/nuxt.ts"
     }
   },
   "repository": "https://github.com/servely/crystal-components",

@@ -125,7 +125,7 @@ const snackbarTimeout = computed<number>(() => {
  */
 function onModelValueChange(value: boolean): void {
   // Emit mode value change
-  emit("update:modelValue", value);
+  model.value = value;
   if (!value) emit("closed");
 }
 </script>

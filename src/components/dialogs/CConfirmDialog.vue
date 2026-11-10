@@ -79,12 +79,7 @@ const props = withDefaults(
      * The variant of the confirm button.
      */
     confirmButtonVariant?:
-      | "tonal"
-      | "flat"
-      | "text"
-      | "elevated"
-      | "outlined"
-      | "plain";
+      "tonal" | "flat" | "text" | "elevated" | "outlined" | "plain";
   }>(),
   {
     type: "confirm",
