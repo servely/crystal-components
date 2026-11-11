@@ -80,7 +80,7 @@
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "sass": "1.107.1",
-    "semantic-release": "23.1.1",
+    "semantic-release": "24.2.9",
     "storybook": "7.6.24",
     "storybook-i18n": "2.0.13",
     "typescript": "6.0.3",
