@@ -1,6 +1,6 @@
 import type { Parameters, StoryContext, VueRenderer } from "@storybook/vue3";
-import { ArgsStoryFn } from "@storybook/types";
-import { useArgs } from "@storybook/preview-api";
+import type { ArgsStoryFn } from "storybook/internal/types";
+import { useArgs } from "storybook/preview-api";
 import { Component } from "vue";
 import isChromatic from "chromatic/isChromatic";
 
