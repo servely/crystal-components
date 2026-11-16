@@ -77,7 +77,7 @@ jobs:
       - semantic-release
     steps:
       - name: Keep `beta` up to date with `main` (fast-forward enabled)
-        uses: johannes-huther/sync-branch@v2
+        uses: johannes-huther/sync-branch@018da752bea04f9bd75647bc0728c734c578b1e2 # v2
         with:
           git_committer_name: ${{ secrets.BUMP_GIT_NAME }}
           git_committer_email: ${{ secrets.BUMP_GIT_EMAIL }}
