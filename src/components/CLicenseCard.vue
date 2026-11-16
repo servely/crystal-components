@@ -17,7 +17,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
 <template>
-  <v-card flat class="pa-2" rounded="xl" >
+  <v-card flat class="pa-2" rounded="xl">
     <v-card-title>
       <a
         v-if="softwareInfo.repositoryLink"
@@ -70,7 +70,7 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <script lang="ts"></script>
 
 <script setup lang="ts">
-import { PropType } from "vue";
+import type { PropType } from "vue";
 import { useI18n } from "vue-i18n";
 import { mdiGithub } from "@mdi/js";
 

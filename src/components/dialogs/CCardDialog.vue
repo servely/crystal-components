@@ -57,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { ComponentPublicInstance, useSlots, watch } from "vue";
+import { type ComponentPublicInstance, useSlots, watch } from "vue";
 import CCard from "../CCard.vue";
 
 const slots = useSlots();
