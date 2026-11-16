@@ -66,7 +66,7 @@
     "@storybook/vue3-vite": "10.6.6",
     "@types/node": "26.6.6",
     "@vitejs/plugin-vue": "6.0.11",
-    "chromatic": "18.14.1",
+    "chromatic": "18.14.3",
     "conventional-changelog-conventionalcommits": "9.3.1",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.2",
