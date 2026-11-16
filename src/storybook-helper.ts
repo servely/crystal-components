@@ -1,7 +1,7 @@
 import type { Parameters, StoryContext, VueRenderer } from "@storybook/vue3";
 import type { ArgsStoryFn } from "storybook/internal/types";
 import { useArgs } from "storybook/preview-api";
-import { Component } from "vue";
+import type { Component } from "vue";
 import isChromatic from "chromatic/isChromatic";
 
 /**
@@ -76,7 +76,7 @@ export function createStorybookRender(options: {
    * They do however work in their respective story pages.
    */
   template?: string;
-}): ArgsStoryFn<VueRenderer, any> {
+}): ArgsStoryFn<VueRenderer, Record<string, unknown>> {
   return () => {
     const [args, updateArgs] = useArgs();
 
@@ -101,10 +101,11 @@ export function createStorybookRender(options: {
  *
  * @param args the provided arguments.
  */
-function toPropString(args: Record<string, any>): string {
+function toPropString(args: Record<string, unknown>): string {
   let propString = "\n    ";
-  for (let key in args) {
-    let value = args[key];
+  for (const [argKey, argValue] of Object.entries(args)) {
+    let key = argKey;
+    let value: unknown = argValue;
 
     // Replace model value with v-model in the documentation.
     if (key === "modelValue") {
@@ -114,7 +115,7 @@ function toPropString(args: Record<string, any>): string {
 
     const colon = typeof value !== "string";
 
-    propString += (colon ? ":" : "") + key + '="' + value + '"\n    ';
+    propString += (colon ? ":" : "") + key + '="' + String(value) + '"\n    ';
   }
   return propString.slice(0, propString.length - 2);
 }

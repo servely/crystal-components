@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { mdiChevronRight } from "@mdi/js";
-import { RouteLocationRaw } from "vue-router";
+import type { RouteLocationRaw } from "vue-router";
 import { useSlots } from "vue";
 
 const slots = useSlots();

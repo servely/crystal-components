@@ -33,7 +33,10 @@ THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <script setup lang="ts">
 import { ref } from "vue";
-import CSnackbar, { CSnackbarLocation, CSnackbarType } from "./CSnackbar.vue";
+import CSnackbar, {
+  type CSnackbarLocation,
+  type CSnackbarType,
+} from "./CSnackbar.vue";
 
 /**
  * Data of a snackbar to display.
