@@ -68,7 +68,7 @@
     "@vitejs/plugin-vue": "6.0.11",
     "chromatic": "18.14.4",
     "conventional-changelog-conventionalcommits": "9.3.1",
-    "eslint": "10.14.0",
+    "eslint": "10.15.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.7",
     "eslint-plugin-storybook": "10.6.7",
