@@ -17,7 +17,8 @@ import { defaultMode } from "./modes";
 
 function loadLocaleMessages(): LocaleMessages<DefaultLocaleMessageSchema> {
   const locales = import.meta.glob("../src/locales/*.json", {
-    as: "raw",
+    query: "?raw",
+    import: "default",
     eager: true,
   });
 
