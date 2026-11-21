@@ -74,7 +74,7 @@
     "eslint-plugin-storybook": "10.6.7",
     "prettier": "3.10.1",
     "sass": "1.108.2",
-    "semantic-release": "25.0.9",
+    "semantic-release": "26.0.1",
     "storybook": "10.6.7",
     "storybook-i18n": "10.1.2",
     "typescript": "6.0.3",
