@@ -82,7 +82,7 @@
     "vite-plugin-dts": "5.1.2",
     "vue": "3.5.45",
     "vue-i18n": "11.4.22",
-    "vuetify": "3.13.7"
+    "vuetify": "3.13.8"
   },
   "dependencies": {
     "@crystal-creations/animated-checkmark": "4.0.0-beta.5",
