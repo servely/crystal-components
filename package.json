@@ -49,7 +49,7 @@
     "@mdi/js": "^7.4.47",
     "vue": "^3.0.0",
     "vue-i18n": "^11.0.0",
-    "vuetify": "^3.5.2"
+    "vuetify": "^3.5.2 || ^4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "21.2.4",
@@ -82,7 +82,7 @@
     "vite-plugin-dts": "5.1.2",
     "vue": "3.5.45",
     "vue-i18n": "11.4.22",
-    "vuetify": "3.13.8"
+    "vuetify": "4.3.4"
   },
   "dependencies": {
     "@crystal-creations/animated-checkmark": "4.0.0-beta.5",
