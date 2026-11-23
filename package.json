@@ -86,6 +86,6 @@
   },
   "dependencies": {
     "@crystal-creations/animated-checkmark": "4.0.1-beta.1",
-    "@crystal-creations/pulsating-circle": "4.0.0"
+    "@crystal-creations/pulsating-circle": "4.0.1-beta.1"
   }
 }
