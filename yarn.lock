@@ -317,10 +317,10 @@
   resolved "https://registry.yarnpkg.com/@crystal-creations/animated-checkmark/-/animated-checkmark-4.0.1-beta.1.tgz#b50c1d54120cb316d0f38464dd1cca7ce7eb40ac"
   integrity sha512-HOvjwWjeDpn5MR5nffNN4Ck8b3oedBmTUKljG7PIzl7YuoV/V3T+fwpwxE1tEQKczGQk7wAWhrCpScJ2gBKjPw==
 
-"@crystal-creations/pulsating-circle@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@crystal-creations/pulsating-circle/-/pulsating-circle-4.0.0.tgz#ca0ece3cf6a9aea8db2e0ba8d2527443fc5698af"
-  integrity sha512-9QwUz1Lyhnt1onVoQDnXbTwY6OVY8/ngQc62OPUN1iLbyEsteyNmAw3KXz6ZGlIrO1lXRrVEUji0JZ832aFD3Q==
+"@crystal-creations/pulsating-circle@4.0.1-beta.1":
+  version "4.0.1-beta.1"
+  resolved "https://registry.yarnpkg.com/@crystal-creations/pulsating-circle/-/pulsating-circle-4.0.1-beta.1.tgz#b4d122c8f20e2e53ed3ebda67b69061c33f20ee7"
+  integrity sha512-SiapvxWIMgEIa417eP+CrZCtdGZtp1D7IwgZAUCB/rJz6E7n7dpyL94UQjKBBdJg7FZiV2V18PS50ARJjwnoBQ==
 
 "@dual-bundle/import-meta-resolve@^4.2.1":
   version "4.2.1"
